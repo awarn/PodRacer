@@ -392,9 +392,9 @@ GameObject:
   - 23: {fileID: 346031614}
   - 54: {fileID: 346031613}
   - 145: {fileID: 346031611}
+  - 145: {fileID: 346031612}
   - 114: {fileID: 346031609}
   - 114: {fileID: 346031610}
-  - 145: {fileID: 346031612}
   m_Layer: 0
   m_Name: Left Rocket
   m_TagString: Untagged
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d62c4386d46f4b9d6db8a6d3081c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_hoverForce: 1000
+  m_hoverForce: 1500
   m_hoverHeight: 2
   m_hoverPoints:
   - {fileID: 1050928471}
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1530511962}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 885b1972ad11a921d000d37b8d76c639, type: 3}
   m_Name: 
@@ -2741,7 +2741,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1530511962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27acebc9ad1110f6d00074c88d76c639, type: 3}
   m_Name: 
@@ -2952,9 +2952,9 @@ GameObject:
   - 23: {fileID: 1827481212}
   - 54: {fileID: 1827481216}
   - 145: {fileID: 1827481218}
+  - 145: {fileID: 1827481215}
   - 114: {fileID: 1827481217}
   - 114: {fileID: 1827481219}
-  - 145: {fileID: 1827481215}
   m_Layer: 0
   m_Name: Right Rocket
   m_TagString: Untagged
@@ -3088,7 +3088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d62c4386d46f4b9d6db8a6d3081c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_hoverForce: 1000
+  m_hoverForce: 1500
   m_hoverHeight: 2
   m_hoverPoints:
   - {fileID: 1909708677}
