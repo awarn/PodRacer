@@ -14,6 +14,7 @@ public class Racer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gameObject.tag = "Player";
+		currentCheckpoint = track.startCheckpoint;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +24,8 @@ public class Racer : MonoBehaviour {
 
     void OnTriggerEnter( Collider other )
     {
-        if (other.tag == "Checkpoint")
+		Debug.Log ("hit");
+        if (other.GetComponent<Checkpoint>())
         {
             Checkpoint hitCheckpoint = other.GetComponent<Checkpoint>();
             if ( hitCheckpoint == currentCheckpoint )

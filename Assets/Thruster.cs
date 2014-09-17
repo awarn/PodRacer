@@ -2,9 +2,7 @@
 using System.Collections;
 
 public class Thruster : MonoBehaviour {
-	
-	public Vector3 heading = new Vector3(0,0,0);
-	public KeyCode key;
+
 	public Rocket rocket;
 	
 	public InputInterface inputInterface;
@@ -15,7 +13,7 @@ public class Thruster : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		heading.Normalize ();
+
 	}
 	
 	// Update is called once per frame

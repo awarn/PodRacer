@@ -8,18 +8,17 @@ public class Track : MonoBehaviour {
     public Checkpoint endCheckpoint;
     public int laps = 1;
 
+	Checkpoint[] checkpoints;
+
 	// Use this for initialization
 	void Start () {
-        foreach (Transform child in transform)
+		checkpoints = GetComponentsInChildren<Checkpoint> ();
+		foreach (Checkpoint checkpoint in checkpoints)
         {
-            GameObject child_gameobject = child.gameObject;
-            if (child_gameobject.tag == "Checkpoint")
-            {
-                if (child_gameobject.GetComponent<Checkpoint>() != startCheckpoint)
-                {
-                    child_gameobject.GetComponent<Checkpoint>().setVisible(false);
-                }
-            }
+			if (checkpoint != startCheckpoint)
+			{
+				checkpoint.setVisible(false);
+			}
         }
             
 	}
