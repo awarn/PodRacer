@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
 
     public Track track;
 
-    private float bestTime = float.MaxValue;
+    private float bestTime = 9999.999f;
 
 	// Use this for initialization
 	void Start () {
