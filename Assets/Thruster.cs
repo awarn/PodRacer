@@ -23,14 +23,9 @@ public class Thruster : MonoBehaviour {
 
 	void FixedUpdate () {
 		force = inputInterface.accelerate * maxForce;
-		
-		if (rocket)
-		{
-			rocket.AddForceAtPosition(force * transform.forward, transform.position);
+
+		if (rocket.EnginesOn == true) {
+			rocket.rigidbody.AddForceAtPosition(force * transform.forward, transform.position);
 		}
-	}
-	
-	void ApplyForce(Rigidbody body, float force_magnitude) {
-		body.AddForceAtPosition (force*transform.forward, transform.position);
 	}
 }

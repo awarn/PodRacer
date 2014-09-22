@@ -5,6 +5,7 @@ public class FalconInputInterface : InputInterface {
 
 	public int falconNum;
 	Vector3 tipPosition;
+	bool[] lastButtonStates;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,14 @@ public class FalconInputInterface : InputInterface {
 		} else {
 			accelerate = 0;
 		}
+
+		bool[] buttonStates;
+		if (FalconUnity.getFalconButtonStates (falconNum, out buttonStates)) {
+			if(buttonStates[2] && buttonStates[2] != lastButtonStates[2]){
+				enginesOn = !enginesOn;
+			}
+		}
+		lastButtonStates = buttonStates;
 	}
 
 }

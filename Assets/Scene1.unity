@@ -297,6 +297,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 52925aea55b22e942bc50b7558584eda, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52925aea55b22e942bc50b7558584eda, type: 2}
   m_RootGameObject: {fileID: 618589581}
@@ -453,7 +457,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 346031607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -1, z: 14}
+  m_LocalPosition: {x: -2.5, y: 0, z: 14}
   m_LocalScale: {x: 2, y: 2, z: 10}
   m_Children:
   - {fileID: 1050928472}
@@ -473,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a2b111fee730cf44bff4a61840136a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputInterface: {fileID: 2052377207}
 --- !u!114 &346031610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +508,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1025290802}
   m_Anchor: {x: 0, y: -.5, z: -.5}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -2.5, y: -2, z: 9}
+  m_ConnectedAnchor: {x: -2.5, y: -1, z: 9}
   m_Spring: 5
   m_Damper: 5
   m_MinDistance: 0
@@ -1485,7 +1490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 7e4a584875960cb48b2b0b6205b6dbcc, type: 2}
       propertyPath: m_forwardAcl
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 7e4a584875960cb48b2b0b6205b6dbcc, type: 2}
       propertyPath: m_backwardAcl
@@ -1545,7 +1550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 7e4a584875960cb48b2b0b6205b6dbcc, type: 2}
       propertyPath: m_hoverHeight
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 7e4a584875960cb48b2b0b6205b6dbcc, type: 2}
       propertyPath: m_hoverPoints.Array.data[4]
@@ -1771,7 +1776,6 @@ GameObject:
   - 54: {fileID: 1025290802}
   - 114: {fileID: 1025290801}
   - 65: {fileID: 1025290800}
-  - 114: {fileID: 1025290799}
   - 114: {fileID: 1025290804}
   - 114: {fileID: 1025290803}
   m_Layer: 9
@@ -1804,17 +1808,6 @@ Transform:
   - {fileID: 2099768326}
   m_Father: {fileID: 1496482398}
   m_RootOrder: 3
---- !u!114 &1025290799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025290797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a2b111fee730cf44bff4a61840136a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1025290800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1841,13 +1834,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_hoverForce: 10
-  m_hoverHeight: 1.5
+  m_hoverHeight: 2
   m_hoverPoints:
   - {fileID: 1401219743}
   - {fileID: 1330961751}
   - {fileID: 410515276}
   - {fileID: 231833370}
-  m_forwardAcl: 100
+  m_forwardAcl: 0
   m_backwardAcl: 0
   m_turnStrength: 0
   m_leftAirBrake: {fileID: 1729599809}
@@ -2732,7 +2725,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1496482397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1120.06213, y: 202.835648, z: 1500.88757}
+  m_LocalPosition: {x: 1120.06213, y: 201.738556, z: 1500.88757}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 618589582}
@@ -2835,7 +2828,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1530511962}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 885b1972ad11a921d000d37b8d76c639, type: 3}
   m_Name: 
@@ -2851,7 +2844,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1530511962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27acebc9ad1110f6d00074c88d76c639, type: 3}
   m_Name: 
@@ -3065,6 +3058,7 @@ GameObject:
   - 145: {fileID: 1827481215}
   - 114: {fileID: 1827481217}
   - 114: {fileID: 1827481219}
+  - 114: {fileID: 1827481220}
   m_Layer: 0
   m_Name: Right Rocket
   m_TagString: Untagged
@@ -3079,7 +3073,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1827481210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -1, z: 14}
+  m_LocalPosition: {x: 2.5, y: 0, z: 14}
   m_LocalScale: {x: 2, y: 2, z: 10}
   m_Children:
   - {fileID: 1909708678}
@@ -3170,6 +3164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a2b111fee730cf44bff4a61840136a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputInterface: {fileID: 2126626000}
 --- !u!145 &1827481218
 SpringJoint:
   m_ObjectHideFlags: 0
@@ -3179,7 +3174,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1025290802}
   m_Anchor: {x: 0, y: -.5, z: -.5}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 2.5, y: -2, z: 9}
+  m_ConnectedAnchor: {x: 2.5, y: -1, z: 9}
   m_Spring: 5
   m_Damper: 5
   m_MinDistance: 0
@@ -3208,6 +3203,21 @@ MonoBehaviour:
   m_turnStrength: 10
   m_leftAirBrake: {fileID: 0}
   m_rightAirBrake: {fileID: 0}
+--- !u!114 &1827481220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827481210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82831d7ba8a72f4eab98e4a727aa8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accelerate: 0
+  yaw: 0
+  pitch: 0
+  enginesOn: 0
 --- !u!1 &1909708677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3349,7 +3359,9 @@ MonoBehaviour:
   accelerate: 0
   yaw: 0
   pitch: 0
-  acceleration: 113
+  enginesOn: 0
+  accButton: 113
+  onButton: 119
 --- !u!1 &2084427827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3367,7 +3379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2084427828
 Transform:
   m_ObjectHideFlags: 0
@@ -3526,4 +3538,5 @@ MonoBehaviour:
   accelerate: 0
   yaw: 0
   pitch: 0
+  enginesOn: 0
   falconNum: 0

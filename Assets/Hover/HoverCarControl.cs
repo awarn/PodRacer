@@ -102,9 +102,9 @@ public class HoverCarControl : MonoBehaviour
             hoverPoint.transform.up * -m_hoverForce,
             hoverPoint.transform.position);
 		*/
-				m_body.AddForceAtPosition(
-					hoverPoint.transform.up * -m_hoverForce,
-					hoverPoint.transform.position);
+		m_body.AddForceAtPosition(
+			hoverPoint.transform.up * -m_hoverForce,
+			hoverPoint.transform.position);
       }
     }
 
