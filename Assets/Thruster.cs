@@ -8,7 +8,7 @@ public class Thruster : MonoBehaviour {
 	public InputInterface inputInterface;
 	
 	float force;
-	public float maxForce = 0;
+	public float maxForce = 1000;
 	public float minForce = 0;
 	
 	// Use this for initialization

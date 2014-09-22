@@ -13,19 +13,27 @@ public class PodFalconFeedback : MonoBehaviour {
 	Vector3 acceleration;
 	// Local G (acceleration/gravity in local space).
 	Vector3 gForce;
-	// Force to send to the Falcon.
-	public Vector3 totalForce;
-	
+
+	public Rocket rocketLeft;
+	public Rocket rocketRight;
+	FalconInputInterface leftInterface;
+	FalconInputInterface rightInterface;
+
 	// Use this for initialization
 	void Start () {
 		lastVelocity = rigidbody.velocity;
+		leftInterface = (FalconInputInterface)rocketLeft.inputInterface;
+		rightInterface = (FalconInputInterface)rocketRight.inputInterface;
 	}
 
 
 	void FixedUpdate () {
-
 		// Random vibrations for engine running feel.
-		vibration = Random.insideUnitSphere;
+		if (rocketLeft.EnginesOn || rocketRight.EnginesOn) {
+			vibration = Random.insideUnitSphere;
+		} else {
+			vibration = Vector3.zero;
+		}
 
 		// Global velocity & acceleration.
 		currentVelocity = rigidbody.velocity;
@@ -33,8 +41,8 @@ public class PodFalconFeedback : MonoBehaviour {
 		Debug.DrawRay (rigidbody.position, acceleration / 10);
 		// Local gforce.
 		gForce = transform.InverseTransformDirection( acceleration / Physics.gravity.magnitude );
-		// Nullify g along z to allow braking and accelerating.
-		gForce.z = 0;
+		// Slash g along z to allow braking and accelerating.
+		gForce.z *= 0.0f;
 
 
 		//Vector3 right = transform.TransformPoint (Vector3.right);
@@ -43,9 +51,11 @@ public class PodFalconFeedback : MonoBehaviour {
 
 
 		// Sum and finalize forces before sending to Falcon.
-		totalForce = -1 * gForce * 0.03f + vibration;
+		Vector3 leftTotal = -1 * gForce * 0.03f + vibration;
+		Vector3 rightTotal = -1 * gForce * 0.03f + vibration;
 		// Add force to the Falcons.
-		FalconUnity.setForceField (0, totalForce);
+		FalconUnity.setForceField (leftInterface.falconNum, leftTotal);
+		FalconUnity.setForceField (rightInterface.falconNum, rightTotal);
 		//FalconUnity.setForceField (1, totalForce);
 
 		// Prepare for next fixedupdate.
